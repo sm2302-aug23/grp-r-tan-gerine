@@ -2,7 +2,7 @@
 
 library(tidyverse)
 library(tibble)
-
+library(dplyr)
 #----------FUNCTIONS----------------------------------
 
 even <- function(x){
@@ -90,8 +90,20 @@ even_odd_avg_len <- collatz_df %>%
   summarise(avg_length = mean(length), sd_length = sd(length))
 #----------------------------------------------------------
 
+backtracks_df <- tibble()                   #Initializing backtrack dataframe
 
-
-
-
-
+for(j in 1:10000){
+  seqTemp <- collatz_df$seq[[j]]          # let seqTemp be the list of starting number j
+  
+  for(i in 1:length(seqTemp)){
+    if(seqTemp[1] >= seqTemp[i]){
+      next
+    } else if(seqTemp[1] < seqTemp[i]){
+      backtracks_df <- rbind(backtracks_df, collatz_df[j,])   # If seq backtracks, add row to backtracks_df then break loop
+      break
+    } else {
+      break       # if no backtracks, break loop
+    }
+  }
+}
+backtracks_df
