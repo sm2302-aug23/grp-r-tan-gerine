@@ -3,6 +3,9 @@
 library(tidyverse)
 library(tibble)
 library(dplyr)
+library(DescTools)
+library(ggplot2)
+
 #----------FUNCTIONS----------------------------------
 
 even <- function(x){
@@ -88,7 +91,9 @@ max_val_int <- collatz_df %>%
 even_odd_avg_len <- collatz_df %>%
   group_by(parity) %>%
   summarise(avg_length = mean(length), sd_length = sd(length))
-#----------------------------------------------------------
+
+
+## Task 3----------------------------------------------------------
 
 backtracks_df <- tibble()                   #Initializing backtrack dataframe
 
@@ -107,3 +112,61 @@ for(j in 1:10000){
   }
 }
 backtracks_df
+
+# Find the frequently occurring number of times they go above their starting
+
+backtracks_count <- backtracks_df %>%
+  mutate(count = 0)
+
+backtracks_count$count
+for (y in 1:length(backtracks_count$start)) {
+  seqCount <- backtracks_count$seq[[y]]
+  for(z in 1:length(seqCount)){
+    if(seqCount[z] > seqCount[1]){
+      backtracks_count$count[y] = backtracks_count$count[y] + 1
+    }
+  }
+}
+
+mode_backtrack <- backtracks_count %>% 
+  summarise(mode = Mode(count))
+
+mode_backtrack
+
+# maximum value reached after the first backtrack for these sequences
+
+max_after_backtrack <- backtracks_df %>%
+  mutate(max = 0)
+max_after_backtrack
+
+# even odd backtracks
+
+n_odd <- backtracks_df %>%
+  filter(Parity == "Odd") %>%
+  summarise(n_odd = n())
+n_odd
+
+n_even <- backtracks_df %>%
+  filter(Parity == "Even") %>%
+  summarise(n_even = n())
+n_even
+
+even_odd_backtrack <- tibble(n_odd, n_even)
+even_odd_backtrack
+
+## Task 4----------------------------------------------------------------
+
+# 1
+ggplot(
+  data = collatz_df,
+  mapping = aes(x = start,
+                y = Length)
+) +
+  geom_point()
+
+ggplot(
+  data = collatz_df,
+  mapping = aes(x = start,
+                y = max_val)
+) +
+  geom_point()
