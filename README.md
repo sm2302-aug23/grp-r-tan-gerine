@@ -10,8 +10,13 @@ submission instructions and marking rubric.
 Task 1: @Afiq-stack
 
 Task 2: @Lim311
+
 Task 3: @haimansyafiq
+
 Task 4: @haimansyafiq
+
 Task 5: @author4
+
 Task 6: @author1
+
 README: @Lim311
