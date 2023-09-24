@@ -12,5 +12,6 @@ max_val_int <- collatz_df %>%
 
 #average length and the standard devietion
 even_odd_avg_len <- collatz_df %>%
-  group_by(parity) %>%
+  mutate(even_odd = ifelse(start %% 2 == 0, "Even", "Odd")) %>%
+  group_by(even_odd) %>%
   summarise(avg_length = mean(length), sd_length = sd(length))
