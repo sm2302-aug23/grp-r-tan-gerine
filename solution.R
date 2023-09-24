@@ -169,4 +169,6 @@ ggplot(
   mapping = aes(x = start,
                 y = max_val)
 ) +
-  geom_point()
+  geom_point() +
+ labs(x = "Starting Integer", y = "Maximum Value") +
+ theme_minimal()
