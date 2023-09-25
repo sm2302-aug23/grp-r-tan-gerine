@@ -25,6 +25,7 @@ README: @Lim311
 **For Task 5**
 
 The question is "What are the most common stopping times, the number of steps it takes for a sequence to first go below its starting integer?"
+
 to achieve this,we can :
 1. Calculating the stopping time for each Collatz sequence.
 2. Creating a histogram or frequency distribution of stopping times to identify the most common stopping times.
@@ -54,5 +55,13 @@ For this creative visualization challenge, we will visualize the behavior of Col
 **Visualization Steps:**
 
 1.Interactive Graph: We will use the networkD3 package to create an interactive network graph. Each node in the graph represents a value in the Collatz sequence, and the edges represent the transitions between values in the sequence.
+
 2.Dynamic Animation: We will animate the graph to show the transitions step by step. As we iterate through the sequence, each transition will be highlighted, and the graph will update to reflect the current state of the sequence.
+
 3.Color Coding: To make the visualization more informative, we can color code nodes and edges based on whether values are even or odd. This can help viewers easily identify patterns in the sequence.
+
+**Benefits for this:**
+
+This visualization provides an intuitive and dynamic way to understand the Collatz Conjecture by visualizing sequences in action.
+
+Viewers can interact with the graph, pause or rewind the animation, and explore different starting integers.
