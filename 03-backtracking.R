@@ -23,7 +23,6 @@ backtracks_df
 backtracks_count <- backtracks_df %>%
   mutate(count = 0)
 
-backtracks_count$count
 for (y in 1:length(backtracks_count$start)) {
   seqCount <- backtracks_count$seq[[y]]
   for(z in 1:length(seqCount)){
@@ -41,7 +40,32 @@ mode_backtrack
 # maximum value reached after the first backtrack for these sequences
 
 max_after_backtrack <- backtracks_df %>%
-  mutate(max = 0)
+  mutate(MaB = 0)
+
+c <- max_after_backtrack$seq[[8]]
+
+
+for (j in length(max_after_backtrack$start)) {
+  seq = max_after_backtrack$seq[[j]]
+  listTemp = c()
+  coun = 0
+  
+  for(i in 1:length(seq)){
+    if(seq[1] >= seq[i]){
+      coun = coun + 1
+      listTemp = append(listTemp, coun)
+    } else if(seq[1] < seq[i]){
+      coun = coun + 1
+      listTemp = append(listTemp, coun)
+      break
+    }
+  }
+  
+  max_after_backtrack$MaB[j] <- max(seq[-listTemp])
+}
+
+max_after_backtrack
+
 
 # even odd backtracks
 

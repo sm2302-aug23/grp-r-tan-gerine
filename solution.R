@@ -5,6 +5,7 @@ library(tibble)
 library(dplyr)
 library(DescTools)
 library(ggplot2)
+library(gghighlight)
 
 #----------FUNCTIONS----------------------------------
 
