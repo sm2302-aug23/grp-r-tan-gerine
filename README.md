@@ -23,7 +23,8 @@ README: @Lim311
 
 
 **For Task 5**
-<sub>The question is "What are the most common stopping times, the number of steps it takes for a sequence to first go below its starting integer?"
+
+The question is "What are the most common stopping times, the number of steps it takes for a sequence to first go below its starting integer?"
 to achieve this,we can :
 1. Calculating the stopping time for each Collatz sequence.
 2. Creating a histogram or frequency distribution of stopping times to identify the most common stopping times.
@@ -43,4 +44,4 @@ This suggests that there are certain "stopping time patterns" that are prevalent
 
 **Reference:**
 Collatz, L. (1937). Über die Vermutung, die sich aus der Collatzschen Vermutung ergibt. German Mathematical Society.
-Lagarias, J. C. (1985). The 3x + 1 Problem and Its Generalizations. American Mathematical Monthly, 92(1), 3-23.<sub>
+Lagarias, J. C. (1985). The 3x + 1 Problem and Its Generalizations. American Mathematical Monthly, 92(1), 3-23.
