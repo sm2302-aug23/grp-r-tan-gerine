@@ -44,4 +44,15 @@ This suggests that there are certain "stopping time patterns" that are prevalent
 
 **Reference:**
 Collatz, L. (1937). Über die Vermutung, die sich aus der Collatzschen Vermutung ergibt. German Mathematical Society.
+
 Lagarias, J. C. (1985). The 3x + 1 Problem and Its Generalizations. American Mathematical Monthly, 92(1), 3-23.
+
+**For Task 6**
+
+For this creative visualization challenge, we will visualize the behavior of Collatz sequences as a dynamic, animated graph. The idea is to create an interactive visualization that showcases how sequences evolve over time.
+
+**Visualization Steps:**
+
+1.Interactive Graph: We will use the networkD3 package to create an interactive network graph. Each node in the graph represents a value in the Collatz sequence, and the edges represent the transitions between values in the sequence.
+2.Dynamic Animation: We will animate the graph to show the transitions step by step. As we iterate through the sequence, each transition will be highlighted, and the graph will update to reflect the current state of the sequence.
+3.Color Coding: To make the visualization more informative, we can color code nodes and edges based on whether values are even or odd. This can help viewers easily identify patterns in the sequence.
