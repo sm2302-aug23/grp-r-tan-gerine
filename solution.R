@@ -6,6 +6,7 @@ library(dplyr)
 library(DescTools)
 library(ggplot2)
 library(gghighlight)
+library(ggrepel)
 
 #----------FUNCTIONS----------------------------------
 

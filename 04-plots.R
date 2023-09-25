@@ -11,16 +11,25 @@ ggplot(
   mapping = aes(x = start,
                 y = Length)
 ) +
-  geom_point() +
+  geom_point(
+    color = "red"
+  ) +
   labs(
     x = "Starting Integer",
     y = "Sequence Length"
   ) +
   gghighlight(
     Length >= min(top_ten$Length)
-  )
+  ) +
+  geom_text_repel(data = top_ten,
+                  aes(label = start))
 
 # 2
+top_ten_max <- backtracks_df %>%
+  arrange(desc(max_val)) %>%
+  slice(1:10)
+top_ten_max
+
 ggplot(
   data = backtracks_df,
   mapping = aes(x = start,
@@ -28,6 +37,11 @@ ggplot(
 ) +
   geom_point() +
   labs(x = "Starting Integer", y = "Maximum Value") +
+  gghighlight(
+    max_val >= min(top_ten_max$max_val)
+  ) +
+  geom_text_repel(data = top_ten_max,
+                  aes(label = start)) +
   theme_minimal()
 
 # 3

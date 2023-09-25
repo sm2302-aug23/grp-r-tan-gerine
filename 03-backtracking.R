@@ -42,10 +42,7 @@ mode_backtrack
 max_after_backtrack <- backtracks_df %>%
   mutate(MaB = 0)
 
-c <- max_after_backtrack$seq[[8]]
-
-
-for (j in length(max_after_backtrack$start)) {
+for (j in 1:length(max_after_backtrack$start)) {
   seq = max_after_backtrack$seq[[j]]
   listTemp = c()
   coun = 0
@@ -54,6 +51,7 @@ for (j in length(max_after_backtrack$start)) {
     if(seq[1] >= seq[i]){
       coun = coun + 1
       listTemp = append(listTemp, coun)
+      next
     } else if(seq[1] < seq[i]){
       coun = coun + 1
       listTemp = append(listTemp, coun)
