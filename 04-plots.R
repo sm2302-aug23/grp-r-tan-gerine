@@ -1,3 +1,8 @@
+library(ggplot2)
+library(gghighlight)
+library(ggrepel)
+library(DescTools)
+
 ## Task 4----------------------------------------------------------------
 
 # 1

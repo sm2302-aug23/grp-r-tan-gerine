@@ -1,4 +1,4 @@
-source("solution.R")
+source("01-gen_collatz.R")
 
 backtracks_df <- tibble()  #Initializing backtrack dataframe
 
