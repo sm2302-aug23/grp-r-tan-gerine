@@ -3,9 +3,6 @@
 library(tidyverse)
 library(tibble)
 library(dplyr)
-library(ggplot2)
-library(gghighlight)
-library(ggrepel)
 
 #----------FUNCTIONS----------------------------------
 
