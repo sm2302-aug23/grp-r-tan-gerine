@@ -17,7 +17,7 @@ Task 4: @haimansyafiq
 
 Task 5: @Lim311
 
-Task 6: @author1
+Task 6: @Lim311
 
 README: @Lim311
 
