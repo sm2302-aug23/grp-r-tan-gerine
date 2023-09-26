@@ -1,7 +1,7 @@
 #example for task 5
 library(dplyr)
 library(ggplot2)
-
+library(DescTools)
 
 # Calculate the stopping time for each sequence
 collatz_df <- collatz_df %>%
