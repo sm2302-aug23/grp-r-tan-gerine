@@ -1,7 +1,7 @@
 #-------------------------------------------------------
 #task 2
 #top 10 starting integers
-top10longest <- collatz_df %>%
+top10longest <- collatz_df[3] %>%
   arrange(desc(Length)) %>%
   head(10)
 
